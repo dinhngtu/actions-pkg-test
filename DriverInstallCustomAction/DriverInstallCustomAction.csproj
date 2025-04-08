@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <AssemblyName>xeninst</AssemblyName>
+    <RootNamespace>XenInstCA</RootNamespace>
+    <LangVersion>9.0</LangVersion>
+    <Platforms>x64;x86;ARM64</Platforms>
+    <Nullable>warnings</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AccelerateBuildsInVisualStudio>false</AccelerateBuildsInVisualStudio>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="CustomAction.config" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Dtf.CustomAction" Version="6.0.0" />
+    <PackageReference Include="WixToolset.Dtf.WindowsInstaller" Version="6.0.0" />
+  </ItemGroup>
+</Project>

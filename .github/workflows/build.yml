@@ -7,8 +7,6 @@ on:
 jobs:
   build-installer:
     runs-on: windows-latest
-    env:
-      NuGetPackageSourceCredentials_xcpng: Username=stormi;Password=${{secrets.GITHUB_TOKEN}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -16,3 +14,5 @@ jobs:
         uses: microsoft/setup-msbuild@v2
       - name: Build
         run: .\build.ps1
+        env:
+          NuGetPackageSourceCredentials_xcpng: Username=stormi;Password=${{secrets.GITHUB_TOKEN}}

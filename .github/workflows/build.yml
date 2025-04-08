@@ -7,8 +7,6 @@ on:
 jobs:
   build-installer:
     runs-on: windows-latest
-    permissions:
-      packages: read
     env:
       NuGetPackageSourceCredentials_xcpng: Username=stormi;Password=${{secrets.GITHUB_TOKEN}}
     steps:
